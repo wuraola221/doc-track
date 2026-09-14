@@ -31,3 +31,17 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment / Secrets ###
+.env
+.env.*
+!.env.example
+
+### Local Spring configuration ###
+application-local.properties
+application-local.yml
+application-secret.properties
+application-secret.yml
+
+### OS files ###
+.DS_Store

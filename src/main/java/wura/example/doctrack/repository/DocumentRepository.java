@@ -26,6 +26,15 @@ public interface DocumentRepository extends JpaRepository<DocumentEntity, Long> 
             @Param("nextWeek") LocalDate nextWeek
     );
 
+    @Query("""
+    SELECT d
+    FROM DocumentEntity d
+    WHERE (d.defaultReminder = :today AND d.defaultReminderSent = false)
+       OR (d.customReminder = :today AND d.customReminderSent = false)
+""")
+    List<DocumentEntity> findDocumentsDueToday(
+            @Param("today") LocalDate today
+    );
     // Get documents expiring before a certain date (useful for reminders later)
     List<DocumentEntity> findByExpiryDateBefore(LocalDate date);
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Expiry date is getting close</title>
+
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4;">
+<div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <div style="text-align: center; margin-bottom: 30px;">
+        <div style="font-size: 24px; font-weight: bold; color: #2563eb; margin-bottom: 10px;">PlanIT</div>
+        <h1 style="margin: 0; font-size: 24px;">Doctrack always sends timely reminders</h1>
+    </div>
+
+    <p>Hello <strong th:text="${name}">User</strong>,</p>
+
+    <p>
+        This is a reminder that your
+        <strong th:text="${documentName}"></strong>
+        is due for renewal.
+    </p>
+
+    <p>
+        <strong>Expiry Date:</strong>
+        <span th:text="${expiryDate}"></span>
+    </p>
+
+    <p>
+        Please renew it before the expiry date to avoid interruptions.
+    </p>
+    <p>Best regards,<br>
+        <strong>The DocTrack Team</strong></p>
+
+    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center;">
+        <p>This is an automated email. Please do not reply to this message.</p>
+        <p>© 2026 DocTrack. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>

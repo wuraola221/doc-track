@@ -34,6 +34,8 @@ public class DocumentService {
 
     private static final String UPLOAD_DIR = "uploads/documents/";
 
+
+
     private byte[] readBytes(MultipartFile file) {
         try {
             return file.getBytes();

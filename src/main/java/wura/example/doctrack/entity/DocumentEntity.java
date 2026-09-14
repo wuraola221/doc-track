@@ -68,6 +68,10 @@ public class DocumentEntity {
     @CreationTimestamp
     private LocalDateTime uploadedAt;
 
+    private boolean defaultReminderSent;
+
+    private boolean customReminderSent;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
